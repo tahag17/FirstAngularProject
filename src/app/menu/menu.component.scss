@@ -1,0 +1,48 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #e74c3c; // Reddish color
+$secondary-color: #2c3e50; // Blackish color
+$background-color: #ecf0f1;
+$border-radius: 5px;
+
+body {
+  font-family: $font-stack;
+  background-color: $background-color;
+  margin: 0; // Remove default margin
+  padding-top: 60px; // Add padding to prevent content from being hidden behind the fixed menu
+  color: $secondary-color;
+}
+
+.menu {
+  background-color: $secondary-color;
+  border-radius: 0; // Remove border radius for full width
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; // Ensure the menu is on top
+  overflow: hidden;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: darken($secondary-color, 10%);
+        }
+      }
+    }
+  }
+}

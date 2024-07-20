@@ -1,0 +1,71 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #e74c3c; // Reddish color
+$secondary-color: #2c3e50; // Blackish color
+$background-color: #ecf0f1;
+$border-radius: 5px;
+
+body {
+  font-family: $font-stack;
+  background-color: $background-color;
+  margin: 0;
+  padding-top: 60px; // Adjust if needed
+  color: $secondary-color;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px;
+  max-width: 300px;
+  font-family: $font-stack;
+
+  .product-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-details {
+    padding: 15px;
+
+    .product-title {
+      font-size: 1.5rem;
+      margin: 10px 0;
+      color: $secondary-color;
+    }
+
+    .product-price {
+      font-size: 1.2rem;
+      color: $primary-color;
+      margin: 10px 0;
+    }
+
+    .product-description {
+      font-size: 1rem;
+      margin: 10px 0;
+      color: lighten($secondary-color, 20%);
+    }
+
+    .product-category {
+      font-size: 0.9rem;
+      margin: 10px 0;
+      color: lighten($secondary-color, 30%);
+    }
+
+    .product-rating {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+
+      .rating-value {
+        font-weight: bold;
+        margin-right: 5px;
+      }
+
+      .rating-count {
+        color: lighten($secondary-color, 20%);
+      }
+    }
+  }
+}
